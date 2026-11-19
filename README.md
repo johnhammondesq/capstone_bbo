@@ -102,30 +102,29 @@ fn  original best 	my best
 8.  9.59848200e+00  9.97488500e+00
 
 ## Repository layout
-.gitignore                         : dont load these files to git 
-LICENSE.txt                        : MIT standard licence 
-README.md                          : this file                                     
-capstone.xlsm                      : all inputs and outputs for each function on eight sheets in the workbook           
-datasheet.md                       : a description of the data used for capstone
-model_card.md                      : how the model works and its purpose 
-requirements.txt                   : versions of software required to replicate this process  
-initial_data/                      : initial function evaluations for functions 1 to 8                              
-initial_data/function_n/           : sample function directory  
-initial_data/function_n/initial_inputs.npy : inputs defined as saved numpy arrays
-initial_data/function_n/initial_outputs.npy : outputs defined as saved numpy arrays
-: Set of directories detailing work for 13 Capstone stages for modules 12 to 24
-: A directory containing the con
-CAP05_MOD16/             : directory of capstone stage 05 for course module 16 
-CAP05_MOD16/Module16answer.docx  # downloadable word file with course answers
-CAP05_MOD16/Module16answer2.docx # a second set of course answers
-CAP05_MOD16/capstone 16.ipynb # the version of the program at the capstone stage
-CAP05_MOD16/inputs.txt   # the inputs file returned by email from the portal - this contains a history of this and previous weeks edited into array definition
-CAP05_MOD16/outputs.txt   # the outputs file returned by email from the portal
-CAPSTONE_CONCLUSION/  : directory containing the Capstone Conclusions
-src/               # capstone source directory 
-src/capstone.ipynb     # main working version of the capstone jupyter notebook  
-src/plotting_utils.py  # plotting of grid estimations for low dimension functions
-
+```text
+├── .gitignore                                # don't load these files to git
+├── LICENSE.txt                               # MIT standard licence
+├── README.md                                 # this file
+├── capstone.xlsm                             # all inputs and outputs for each function on eight sheets in the workbook
+├── datasheet.md                              # a description of the data used for capstone
+├── model_card.md                             # how the model works and its purpose
+├── requirements.txt                          # versions of software required to replicate this process
+├── initial_data/                             # initial function evaluations for functions 1 to 8
+│   └── function_n/                           # sample function directory
+│       ├── initial_inputs.npy                # inputs defined as saved numpy arrays
+│       └── initial_outputs.npy               # outputs defined as saved numpy arrays
+├── CAP01_MOD12/ ... CAP13_MOD24/             # set of directories detailing work for 13 Capstone stages for modules 12 to 24
+│   └── CAP05_MOD16/                          # directory of capstone stage 05 for course module 16
+│       ├── Module16answer.docx               # downloadable word file with course answers
+│       ├── Module16answer2.docx              # a second set of course answers
+│       ├── capstone 16.ipynb                 # the version of the program at the capstone stage
+│       ├── inputs.txt                        # the inputs file returned by email from the portal - history of this and previous weeks edited into array definition
+│       └── outputs.txt                       # the outputs file returned by email from the portal
+├── CAPSTONE_CONCLUSION/                      # directory containing the Capstone Conclusions
+└── src/                                      # capstone source directory
+    ├── capstone.ipynb                        # main working version of the capstone jupyter notebook
+    └── plotting_utils.py                     # plotting of grid estimations for low dimension functions
 ## CONTACT DETAILS
 John Hammond — email johnhammondesq@yahoo.co.uk Questions and suggestions are welcome as GitHub issues on this repository.
 
