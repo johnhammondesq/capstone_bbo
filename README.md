@@ -125,6 +125,8 @@ fn  original best 	my best
 └── src/                                      # capstone source directory
     ├── capstone.ipynb                        # main working version of the capstone jupyter notebook
     └── plotting_utils.py                     # plotting of grid estimations for low dimension functions
+
+```
 ## CONTACT DETAILS
 John Hammond — email johnhammondesq@yahoo.co.uk Questions and suggestions are welcome as GitHub issues on this repository.
 
