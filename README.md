@@ -8,7 +8,7 @@ We need to optimise the performance of 8 of "black box" functions F1 to F8. Ther
 
 We have initially been provided with 10 or more parameterised calls to each function and the value returned. 
 
-Our goal is to MAXIMISE the value for each function by making a guess of inputs every week for 13 weeks through a portal for which the functions will be evaluated and returned in an email.
+Our goal is to MAXIMISE the value for each function by making a guess of inputs every week for 13 weeks through a portal for which the functions will be evaluated and returned in an email. This simulates the expensive nature of the real function evaluation.
 
 Each input is between 0 and 1. This is not stated in the Capstone but confirmed by staff independently.
   
@@ -86,10 +86,18 @@ I computed the input correlations and a Principal Component Analysis of results 
 
 
 ## HYPERPARAMETER OPTIMSATION
-Description of which hyperparameters you have and how you chose to optimise them. 
+
+Looking at others' results I should have looped through the possible combinations as Bayesian Optimisation is very lightweight to run. I had to start simple to confirm I was doing the basics correctly.
+
+Optimisation Function: Number of restarts=Random|Normal 
+GP  Kernel: = rbf| matern with optional white noise 
+Acquisition Function:  
+Ucb: beta=no of sds., 
+EI: xi = minimum improvement
+
 
 ## RESULTS
-I have created a dashboard to show my progress against the original maxima. My goal was to beat all originals
+I have created a dashboard to show my progress against the original maxima. My goal was to beat all originals which was achieved
 
 fn  original best 	my best
 1.  7.71087511e-16  6.25449708e-05
@@ -100,6 +108,20 @@ fn  original best 	my best
 6. -7.14264948e-01 -3.01723506e-01
 7.  1.36496830e+00  2.28758587e+00
 8.  9.59848200e+00  9.97488500e+00
+
+| Fn | d | Best in supplied data | Best found |
+|---|---|---|---|
+| F1 | 2 | 7.71087511e-16 | **6.25449708e-05** | 
+| F2 | 2 | 0.611 | **0.645** | 
+| F3 | 3 | −0.034835 | **−0.034832** | 
+| F4 | 4 | −4.03 | **0.612** | 
+| F5 | 4 | 1,089 | **7,566** | 
+| F6 | 5 | −0.714 | **−0.302** | 
+| F7 | 6 | 1.365 | **2.287** | 
+| F8 | 8 | 9.598 | **9.975** | 
+
+
+
 
 ## Repository layout
 ```text
@@ -132,4 +154,4 @@ John Hammond — email johnhammondesq@yahoo.co.uk Questions and suggestions are 
 
 ## Licence
 
-Code and documentation: MIT licence (see LICENSE). The challenge functions and initial data belong to the Imperial College PCMLAI programme and are included for educational use only.
+Code and documentation: MIT licence (see [LICENSE](license.txt)). The challenge functions and initial data belong to the Imperial College PCMLAI programme and are included for educational use only.
