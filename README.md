@@ -137,4 +137,4 @@ John Hammond — email johnhammondesq@yahoo.co.uk Questions and suggestions are 
 
 ## Licence
 
-Code and documentation: MIT licence (see [LICENSE](license.txt)). The challenge functions and initial data belong to the Imperial College PCMLAI programme and are included for educational use only.
+Code and documentation: MIT licence (see [LICENSE](LICENSE.txt)). The challenge functions and initial data belong to the Imperial College PCMLAI programme and are included for educational use only.
