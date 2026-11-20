@@ -1,5 +1,11 @@
 # Capstone project: Black Box Optimisation for Imperial College Professional Certificate in Machine Learning and Artificial Intelligence.
 
+[datasheet](datasheet.md) · [model card](model_card.md) 
+
+## Non Technical Explanation
+
+You have eight machines, each with 2–8 adjustable inputs. Each week you set the inputs, run each machine once, and record the output. Previous users’ records (10–40 weeks per machine) are available. Over 13 weeks you must beat their best output, competing against fellow students. Each try can exploit trends behind the previous maximum or explore untried inputs. I wrote a program using Bayesian Optimisation, which builds a statistical model of the machine from past results and picks the next inputs, varying how much it exploits versus explores.
+
 ## Project overview
 
 Imperial college ML course capstone project
@@ -29,34 +35,9 @@ files which are not in the original .npy format. The results are cumulative so y
 
 I transform these to npy arrays within the files and include them in my main capstone program as documentation of each week's work. 
 
-The inputs have to follow a format of zero fronted by 6 decimal places delimited by a dash.
+The inputs have to follow a format of zero fronted by 6 decimal places delimited by a dash when uploaded into the portal.
 
 0.562189-0.356654-1.000000-1.000000 Example for a 4 dimensional input 
-
-## Challenge Objectives
-
-I have created a dashboard to show my progress against the original maxima. My goal is to beat all originals
-
-fn  original best 	my best
-1.  7.71087511e-16  6.25449708e-05
-2.  6.11205216e-01  6.44501013e-01
-3. -3.48353134e-02 -3.48328477e-02
-4. -4.02554228e+00  6.12529679e-01
-5.  1.08885962e+03  7.56593488e+03
-6. -7.14264948e-01 -3.01723506e-01
-7.  1.36496830e+00  2.28758587e+00
-8.  9.59848200e+00  9.97488500e+00
-
-
-All functions are to be maximised.
-
-What constraints or limitations must you consider 
-(e.g. number of queries, response delay and unknown function structure)?
-
-The functions are not known and we have 13 weeks to optimise (you can fall behind and catch up). For what 
-should be an automated system the response can seem very slow at 4 or 5 days but I believe this has been 
-corrected.
-
 
 
 ## Model and Technical Approach
@@ -83,8 +64,6 @@ Facilities to output readings to .csv spreadsheets for Excel analysis. Excel ana
 I computed the input correlations and a Principal Component Analysis of results which was not really useful because of the lack of correlation.
 
 
-
-
 ## HYPERPARAMETER OPTIMSATION
 
 Looking at others' results I should have looped through the possible combinations as Bayesian Optimisation is very lightweight to run. I had to start simple to confirm I was doing the basics correctly.
@@ -99,16 +78,6 @@ EI: xi = minimum improvement
 ## RESULTS
 I have created a dashboard to show my progress against the original maxima. My goal was to beat all originals which was achieved
 
-fn  original best 	my best
-1.  7.71087511e-16  6.25449708e-05
-2.  6.11205216e-01  6.44501013e-01
-3. -3.48353134e-02 -3.48328477e-02
-4. -4.02554228e+00  6.12529679e-01
-5.  1.08885962e+03  7.56593488e+03
-6. -7.14264948e-01 -3.01723506e-01
-7.  1.36496830e+00  2.28758587e+00
-8.  9.59848200e+00  9.97488500e+00
-
 | Fn | d | Best in supplied data | Best found |
 |---|---|---|---|
 | F1 | 2 | 7.71087511e-16 | **6.25449708e-05** | 
@@ -119,8 +88,6 @@ fn  original best 	my best
 | F6 | 5 | −0.714 | **−0.302** | 
 | F7 | 6 | 1.365 | **2.287** | 
 | F8 | 8 | 9.598 | **9.975** | 
-
-
 
 
 ## Repository layout
